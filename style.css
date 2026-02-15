@@ -1,0 +1,174 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #b0035a;
+
+  background: linear-gradient(-45deg, #f76c9d, #f3d7e1, #e1c4e5, #7be4a6);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 38px;
+  font-family: 'Pacifico', cursive;
+  color: #f5eff4;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #d3dcef;
+  border-radius: 12px;
+  outline: none;
+  background: #cde1d4;
+  color: #5d0656;
+}
+
+button {
+  padding: 12px 14px;
+  border: 1px solid #e8f6e9;
+  border-radius: 12px;
+  background: #be87ae;
+  color: #e8eefc;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.30); }
+
+.card {
+  border: 1px solid hsl(137, 54%, 81%);
+  border-radius: 16px;
+  padding: 14px;
+  background: #d5e1d7;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+
+}
+
+.filter.active {
+  border-color: #d1e9c7;
+  box-shadow: 0 0 0 2px rgba(16, 141, 72, 0.25);
+}
+
+.danger {
+  margin-left: auto;
+  background: #31814970;
+  border-color: #d1e9c7;
+ 
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #f3f5fb;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.item.done .text {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.text { flex: 1; }
+
+.iconBtn {
+  width: 40px;
+  display: grid;
+  place-items: center;
+  background: #dbe4de70;
+  
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.85;
+  padding-top: 6px;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.cherries {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cherries span {
+  position: absolute;
+  font-size: 37px;
+  opacity: 0.45;
+  animation: float 25s linear infinite;
+ text-shadow: 0 0 8px rgba(255, 0, 100, 0.3);
+
+}
+
+/* Farklı pozisyonlar */
+.cherries span:nth-child(1) {
+  left: 10%;
+  animation-duration: 30s;
+}
+.cherries span:nth-child(2) {
+  left: 50%;
+  animation-duration: 22s;
+}
+.cherries span:nth-child(3) {
+  left: 80%;
+  animation-duration: 28s;
+}
+
+@keyframes float {
+  0% {
+    top: 110%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: -10%;
+    transform: rotate(360deg);
+  }
+}
+button:hover {
+  transform: scale(1.05);
+}
+

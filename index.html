@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JUSTDO🌞</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+  <div class="cherries">
+  <span>🍒</span>
+  <span>🍒</span>
+  <span>🍒</span>
+  <span>🍒</span>
+</div>
+
+  <main class="container">
+    <h1>FAKE IT TİLL YOU MAKE IT 🌞</h1>
+
+    <form id="todoForm" class="row">
+      <input id="todoInput" type="text" placeholder="Yeni görev yaz..." autocomplete="off" />
+      <button id="addBtn" type="submit">Ekle</button>
+    </form>
+
+    <section class="card">
+      <div class="filters">
+        <button class="filter active" data-filter="all">Hepsi</button>
+        <button class="filter" data-filter="active">Yapacaklarım</button>
+        <button class="filter" data-filter="done">TamamLandı</button>
+        <button id="clearDone" class="danger">Tamamlananları Sil</button>
+      </div>
+
+      <ul id="todoList" class="list"></ul>
+
+      <div class="footer">
+        <span id="countText">0 görev</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
